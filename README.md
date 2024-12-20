@@ -4,12 +4,12 @@
 
 ## Setup & Run 🏃‍♂️
 
-#### Clone this repository:
+- Clone this repository:
 ```bash
 git clone https://github.com/jahangir1x/fastapi-hackathonkit.git
 ```
 
-#### Set up your environment by copying the template .env file:
+- Set up your environment by copying the template .env file:
 ```bash
 cd fastapi-hackathonkit
 
@@ -17,7 +17,7 @@ cp dot-env-template .env   # linux
 copy dot-env-template .env # windows
 ```
 
-#### For local development
+- For local development
 ```bash
 python -m venv .pyenv
 
@@ -36,11 +36,26 @@ python app/seed_db_with_initial_data.py
 fastapi dev app/main.py --reload
 ```
 
-#### For Docker
+- For Docker
 ```bash
 docker-compose up --build
 ```
 
-Then:
-- Visit http://localhost:4000/docs for the interactive API docs (Swagger). For initial super-username and password to first authenticate see your **.env** file.
-
+## Workflow 🛠 ️
+##### Define models
+- Edit `app/models/{new_item}.py`
+- Then we need to register the model in `app/models/__init__.py`
+##### Create revision for the model
+- create revision file with `$ alembic revision --autogenerate -m "Add {new_item} table"`
+- then upgrade the database with `$ alembic upgrade head`
+##### Add some dummy data in the database.
+- Open any database client and add some data in the table.
+##### Define schemas
+- Edit `app/schemas/{new_item}.py`
+- Then we need to register the schema in `app/schemas/__init__.py`
+##### Define CRUD operations
+- Edit `app/crud/{new_item}.py`
+- Then we need to register the crud in `app/crud/__init__.py`
+##### Define API endpoints
+- Edit `app/api/api_v{x}/{new_item}.py`
+- Then we need to register the router in `app/api/api_v{x}/api.py`
