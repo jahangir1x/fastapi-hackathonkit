@@ -29,9 +29,9 @@ def init() -> None:
 
 
 def main() -> None:
-    logger.info("Initializing service")
+    logger.info("Testing DB connection")
     init()
-    logger.info("Service finished initializing")
+    logger.info("DB connection OK")
 
 
 if __name__ == "__main__":

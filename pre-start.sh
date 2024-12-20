@@ -2,7 +2,7 @@
 
 # Let the DB start
  
-python ./app/backend_pre_start.py
+python ./app/check_db_connection.py
 
 # Run migrations
 
@@ -11,4 +11,4 @@ alembic upgrade head
  
 
 # Create initial data in DB
-python ./app/initial_data.py
+python ./app/seed_db_with_initial_data.py
