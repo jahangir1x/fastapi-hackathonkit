@@ -1,4 +1,4 @@
-# 🚀 fastapi-postgresql-hackathonkit
+# 🚀 fastapi-hackathonkit
 
 ![Badge](https://img.shields.io/badge/Made%20with-FastAPI-green) ![Badge](https://img.shields.io/badge/PostgreSQL-For%20All%20Your%20Data%20Needs-blue) ![Badge](https://img.shields.io/badge/Dockerized-Yep!-2496ED) ![Badge](https://img.shields.io/badge/Forked-But%20Revamped-red)
 
@@ -6,12 +6,12 @@
 
 #### Clone this repository:
 ```bash
-git clone https://github.com/jahangir1x/fastapi-postgresql-hackathonkit.git
+git clone https://github.com/jahangir1x/fastapi-hackathonkit.git
 ```
 
 #### Set up your environment by copying the template .env file:
 ```bash
-cd fastapi-postgresql-hackathonkit
+cd fastapi-hackathonkit
 
 cp dot-env-template .env   # linux
 copy dot-env-template .env # windows
