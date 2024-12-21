@@ -31,7 +31,7 @@ set PYTHONPATH=%cd%    # windows
 
 # make sure your postgresql server is running
 python app/check_db_connection.py
-alemmbic upgrade head
+alembic upgrade head
 python app/seed_db_with_initial_data.py
 fastapi dev app/main.py --reload
 ```
